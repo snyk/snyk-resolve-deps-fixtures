@@ -6,5 +6,5 @@ metadata:
     snyk.io/assetClassfication: intentionally-vulnerable
 spec:
   type: other
-  lifecycle: development
+  lifecycle: production
   owner: os-managed
