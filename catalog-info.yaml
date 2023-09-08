@@ -2,9 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: snyk-resolve-deps-fixtures
-  labels:
-    snyk.io/assetClassfication: intentionally-vulnerable
 spec:
-  type: other
-  lifecycle: production
+  type: intentionally-vulnerable
+  lifecycle: unused-field
   owner: os-managed
