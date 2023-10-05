@@ -32,5 +32,9 @@
     "@remy/vuln-test",
     "semver-rs-demo"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snyk/snyk-resolve-deps-fixtures.git"
+  },
   "snyk": true
 }
