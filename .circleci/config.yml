@@ -2,6 +2,16 @@ version: 2.1
 
 orbs:
   prodsec: snyk/prodsec-orb@1.0
+  node: circleci/node@5.1.0
+
+jobs:
+  release:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Release
+          command: npx semantic-release@21
 
 workflows:
   version: 2
@@ -12,3 +22,13 @@ workflows:
           context:
             - snyk-bot-slack
           channel: os-team-managed-alerts
+
+      - release:
+          name: Release
+          context: nodejs-lib-release
+          requires:
+            - Scan repository for secrets
+          filters:
+            branches:
+              only:
+                - main
