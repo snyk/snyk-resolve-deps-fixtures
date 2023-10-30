@@ -4,6 +4,13 @@ orbs:
   prodsec: snyk/prodsec-orb@1.0
   node: circleci/node@5.1.0
 
+commands:
+  npmrc:
+    steps:
+      - run:
+          name: Create .npmrc
+          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> .npmrc
+
 jobs:
   release:
     executor: node/default
