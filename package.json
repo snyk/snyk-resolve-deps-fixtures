@@ -13,7 +13,7 @@
     "snyk",
     "fixtures"
   ],
-  "author": "Remy Sharp",
+  "author": "snyk.io",
   "license": "UNLICENSED",
   "dependencies": {
     "@remy/npm-tree": "1.0.2",
