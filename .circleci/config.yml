@@ -4,13 +4,6 @@ orbs:
   prodsec: snyk/prodsec-orb@1.0
   node: circleci/node@5.1.0
 
-commands:
-  npmrc:
-    steps:
-      - run:
-          name: Create .npmrc
-          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> .npmrc
-
 jobs:
   release:
     executor: node/default
@@ -18,7 +11,9 @@ jobs:
       - checkout
       - run:
           name: Release
-          command: npx semantic-release@21
+          command: |
+            export NPM_ID_TOKEN=$(circleci run oidc get --claims '{"aud": "npm:registry.npmjs.org"}')
+            npx semantic-release@25.0.3
 
 workflows:
   version: 2
@@ -32,7 +27,9 @@ workflows:
 
       - release:
           name: Release
-          context: nodejs-lib-release
+          context:
+            - nodejs-install
+            - github-release
           requires:
             - Scan repository for secrets
           filters:
