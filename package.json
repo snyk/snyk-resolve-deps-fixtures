@@ -1,7 +1,7 @@
 {
   "name": "snyk-resolve-deps-fixtures",
   "version": "1.1.6",
-  "description": "",
+  "description": "Fixtures for github.com/snyk/resolve-deps",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,7 @@
     "fixtures"
   ],
   "author": "snyk.io",
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "dependencies": {
     "@remy/npm-tree": "1.0.2",
     "@remy/snyk-shrink-test": "^1.0.0",
@@ -35,6 +35,23 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/snyk/snyk-resolve-deps-fixtures.git"
+  },
+  "homepage": "https://github.com/snyk/snyk-resolve-deps-fixtures#readme",
+  "bugs": {
+    "url": "https://github.com/snyk/snyk-resolve-deps-fixtures/issues"
+  },
+  "files": [
+    "jsbin-file-tree.json",
+    "pm2-disk.json",
+    "snyk-resolve-deps-npm2.json",
+    "snyk-resolve-deps-npm3.json",
+    "snyk-vuln-tree.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8"
   },
   "snyk": true
 }
