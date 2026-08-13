@@ -20,3 +20,7 @@ Licensed under the [Apache License, Version 2.0](LICENSE).
 ## Security
 
 To report a security issue, see [SECURITY.md](SECURITY.md).
+
+## Contact
+
+GitHub Slug: [@snyk/engines_sca-scanners](https://github.com/orgs/snyk/teams/engines_sca-scanners) | Slack Channel: [#team-sca-scanners](https://snyk.slack.com/channels/team-sca-scanners)
