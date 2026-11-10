@@ -8,7 +8,9 @@ orbs:
 
 jobs:
   release:
-    executor: node/default
+    executor:
+      name: node/default
+      tag: '22'
     steps:
       - checkout
       - run:
