@@ -8,7 +8,9 @@ orbs:
 
 jobs:
   release:
-    executor: node/default
+    executor:
+      name: node/default
+      tag: '24'  # npm 11+ (Node 24) is needed for OIDC trusted publishing
     steps:
       - checkout
       - run:
